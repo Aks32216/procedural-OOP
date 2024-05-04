@@ -8,7 +8,7 @@ public class Applet extends PApplet {
     public static final int HEIGHT = 1000;
     public static final int DIAMETER = 100;
     public int numberOfBalls = 4;
-    Balls[] balls;
+    Ball[] balls;
 
     public static void main(String[] args) {
         PApplet.main("Applet",args);
@@ -22,15 +22,15 @@ public class Applet extends PApplet {
 
     @Override
     public void setup() {
-        balls=new Balls[numberOfBalls];
+        balls=new Ball[numberOfBalls];
         for(int i=1;i<=numberOfBalls;++i){
-            balls[i-1]=new Balls(0,i*(HEIGHT/5),i,DIAMETER);
+            balls[i-1]=new Ball(0,i*(HEIGHT/5),i,DIAMETER);
         }
     }
 
     @Override
     public void draw() {
-        for(Balls ball:balls){
+        for(Ball ball:balls){
             ellipse(ball.getXPosition(),ball.getYPosition(),ball.getDiameter(),ball.getDiameter());
             ball.updateSpeed();
         }

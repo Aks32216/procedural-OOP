@@ -1,10 +1,10 @@
-public class Balls {
+public class Ball {
     private int xPosition;
     private int yPosition;
     private int speedRate;
     private int diameter;
 
-    public Balls(int xPosition,int yPosition,int speedRate,int diameter){
+    public Ball(int xPosition,int yPosition,int speedRate,int diameter){
         this.xPosition=xPosition;
         this.yPosition=yPosition;
         this.speedRate=speedRate;
